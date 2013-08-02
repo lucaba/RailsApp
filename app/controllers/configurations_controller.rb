@@ -6,7 +6,7 @@ class ConfigurationsController < ApplicationController
   end
 
   def show
-    @configuration = current_user.configuration.find_by(id: params[:id])
+    @configuration = current_user.configuration
   end
 
   def destroy
