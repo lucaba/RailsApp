@@ -1,1 +1,10 @@
-Uhh
+<% provide(:title, @username + ' ' + 'configuration') %>
+<div class="row">
+    <aside class="span4">
+        <section>
+            <h1>
+                <%= @configuration.content %>
+            </h1>
+        </section>
+    </aside>
+</div>

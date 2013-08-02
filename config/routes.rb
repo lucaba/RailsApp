@@ -5,7 +5,7 @@ CDNApp::Application.routes.draw do
   match '/help',          to: 'static_pages#help',    via: 'get'
 
   resources :users do
-    resource :configurations
+    resource :configurations, only: [:update, :edit, :show]
   end
 
   match '/signup',        to: 'users#new',            via: 'get'
