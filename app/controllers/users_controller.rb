@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def create
     user = @user = User.new(user_params)
-    @configuration = user.build_configuration(content: 'hi')
+    @configuration = user.build_configuration(content: 'default_config')
     if @user.save && @configuration.save
       sign_in @user
       flash[:succes] = "Welcome to the Sample App!"

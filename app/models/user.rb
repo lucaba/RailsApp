@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_one :configuration, dependent: :destroy
+  has_one :configuration, dependent: :delete
+  has_many :data_files, dependent: :delete_all
 
   # Callbacks
   before_save { self.email = email.downcase }
