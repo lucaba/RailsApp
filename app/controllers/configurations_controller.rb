@@ -12,6 +12,10 @@ class ConfigurationsController < ApplicationController
     @username = current_user.name
   end
 
+  def update
+
+  end
+
   private
 
     def configuration_params

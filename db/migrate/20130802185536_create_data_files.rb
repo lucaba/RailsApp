@@ -3,7 +3,6 @@ class CreateDataFiles < ActiveRecord::Migration
     create_table :data_files do |t|
        t.string :name,       null: false
        t.binary :data,       null: false
-       t.string :filename
        t.string :extension
        t.float  :size
 
